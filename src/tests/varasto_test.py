@@ -54,7 +54,7 @@ class TestVarasto(unittest.TestCase):
     def test_laitetaan_liikaa(self):
         self.varasto.lisaa_varastoon(12)
 
-        self.assertAlmostEqual(self.varasto.tilavuus, 10)
+        self.assertAlmostEqual(self.varasto.tilavuus, 12)
 
     
     def test_laitetaan_negatiivinen(self):
