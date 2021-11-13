@@ -1,10 +1,6 @@
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
-        if tilavuus > 0.0:
-            self.tilavuus = tilavuus
-        else:
-            # virheellinen, nollataan
-            self.tilavuus = 0.0
+        self.tilavuus = (tilavuus + abs(tilavuus))//2
 
         if alku_saldo < 0.0:
             # virheellinen, nollataan
@@ -38,33 +34,8 @@ class Varasto:
             return kaikki_mita_voidaan
 
         self.saldo = self.saldo - maara
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        print("x")
-        
+
         return maara
 
     def __str__(self):
-        return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}jhkjhkjkjhkjhkjhkjhkjhkjhhhhhhhhhhhhhh"
+        return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
